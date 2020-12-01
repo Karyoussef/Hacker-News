@@ -7,7 +7,7 @@ const renderLi = (allPosts,index, item , flag) =>{
 
     li = document.querySelector('#newPostItem').cloneNode(true);
 
-    var idText = allPosts? 'postItem-':'commentItem-';
+    var idText = allPosts? 'postItem:'+item.id+'-':'commentItem-';
 
     li.setAttribute('id' , idText + index);
 

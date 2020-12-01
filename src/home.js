@@ -117,8 +117,8 @@ hideList = async (e) =>{
     yScroll = window.pageYOffset
     
     
-    
-    const id = parseInt(e.target.id.split("-")[1]);
+    const temp = e.target.id.split(":")[1]
+    const id = parseInt(temp.split("-")[0]);
     document.querySelector('#posts').style.display = 'none'
     document.querySelector('#back-btn').style.display = 'block';
     document.querySelector('#loading').style.display = 'block';

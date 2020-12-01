@@ -3,15 +3,6 @@ const axios = require('axios')
 
 const loadPost = async (postId) => {
 
-    
-    const url = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty&orderBy=%22$key%22&startAt="'+postId+'"&endAt="'+postId+'"'; 
-    
-    postId = await axios.get(url)
-
-
-    
-
-    postId = Object.values(postId.data)[0]
 
     const getByIdUrl = 'https://hacker-news.firebaseio.com/v0/item/'+postId+'.json?print=pretty'
 
